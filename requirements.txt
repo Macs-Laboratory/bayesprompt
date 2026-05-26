@@ -1,0 +1,15 @@
+torch>=2.0.0
+torchvision>=0.15.0
+numpy
+scipy
+pandas
+scikit-learn
+Pillow
+matplotlib
+tqdm
+omegaconf
+pyyaml
+opencv-python
+einops
+# nibabel is optional for NIfTI processing
+nibabel

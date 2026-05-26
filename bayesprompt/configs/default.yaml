@@ -1,0 +1,28 @@
+dataset:
+  source_modality: CT
+  target_modality: CT
+  base_dir: ./data
+  image_size: 512
+  batch_size: 16
+  num_classes: 2
+  include_background: True
+
+fewshot:
+  k: 3
+  seeds: [0, 1, 2, 3, 4]
+
+adaptation:
+  mode: bayesian_finetune
+  iterations: 20
+  lambda_kl: 0.1
+  mc_samples_train: 4
+  mc_samples_eval: 8
+
+model:
+  name: BayesPrompt
+  encoder_name: sam2
+  prompt_dim: 256
+  trainable_components: ["decoder", "head", "prompt_mlp"]
+
+output_dir: ./outputs
+checkpoint_path: null

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bayesprompt"
+version = "0.1.0"
+description = "Uncertainty-Aware Bayesian Prompt Adaptation for Robust Cross-Modality Medical Segmentation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "torchvision",
+    "numpy",
+    "matplotlib",
+    "monai",
+    "tqdm",
+    "scikit-image",
+    "pandas",
+    "scipy",
+    "omegaconf"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"

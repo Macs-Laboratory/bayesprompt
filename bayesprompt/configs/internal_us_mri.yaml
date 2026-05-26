@@ -1,0 +1,25 @@
+dataset:
+  name: "RotatorCuff"
+  root: "./data/rotator_cuff"
+  source_modality: "US"
+  target_modality: "MRI"
+  image_size: 512
+  num_classes: 2
+
+fewshot:
+  k: 3
+  seeds: [0, 1, 2, 3, 4]
+  patient_level: true
+
+model:
+  lightweight_backend: true
+
+adaptation:
+  mode: "bayesian_finetune"
+
+training:
+  source_epochs: 5  # Note: The paper setting uses source_epochs: 100. The released example config uses 5 for smoke testing; set source_epochs: 100 for paper-level reproduction.
+  device: "cuda"
+
+output:
+  experiment_name: "internal_us_mri"

@@ -1,0 +1,16 @@
+{
+    "train": [
+        {"patient_id": "P001", "image": "images/P001_img.nii.gz", "mask": "masks/P001_mask.nii.gz"},
+        {"patient_id": "P002", "image": "images/P002_img.nii.gz", "mask": "masks/P002_mask.nii.gz"}
+    ],
+    "val": [
+        {"patient_id": "P003", "image": "images/P003_img.nii.gz", "mask": "masks/P003_mask.nii.gz"}
+    ],
+    "test": [
+        {"patient_id": "P004", "image": "images/P004_img.nii.gz", "mask": "masks/P004_mask.nii.gz"},
+        {"patient_id": "P005", "image": "images/P005_img.nii.gz", "mask": "masks/P005_mask.nii.gz"}
+    ],
+    "support_sets": {
+        "k1": [{"patient_id": "P001", "image": "images/P001_img.nii.gz", "mask": "masks/P001_mask.nii.gz"}]
+    }
+}

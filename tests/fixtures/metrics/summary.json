@@ -1,0 +1,5 @@
+[
+    {"method": "U-Net", "direction": "CT->MRI", "k": 3, "dice_mean": 0.55, "dice_ci95": 0.05},
+    {"method": "BayesPrompt", "direction": "US->MRI", "k": 3, "dice_mean": 0.72, "dice_ci95": 0.03, "ece_mean": 0.12, "ece_ci95": 0.01},
+    {"ablation_name": "w/o BMPA", "direction": "US->MRI", "dice_mean": 0.65, "dice_ci95": 0.04, "ece_mean": 0.18, "ece_ci95": 0.02}
+]
